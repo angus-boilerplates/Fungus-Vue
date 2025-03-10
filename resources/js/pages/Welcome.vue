@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head, Link } from '@inertiajs/vue3';
-import AppLogoLanding from '@/components/AppLogoLanding.vue';
+import AppLogo from '@/components/AppLogo.vue';
 </script>
 
 <template>
@@ -36,7 +36,7 @@ import AppLogoLanding from '@/components/AppLogoLanding.vue';
         </header>
         <div class="duration-750 starting:opacity-0 flex w-full items-center justify-center opacity-100 transition-opacity lg:grow">
             <main class="flex w-full max-w-[335px] flex-col-reverse overflow-hidden rounded-lg lg:max-w-4xl lg:flex-row">
-                <AppLogoLanding />
+                <AppLogo />
             </main>
         </div>
         <div class="h-14.5 hidden lg:block"></div>

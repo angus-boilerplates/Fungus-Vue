@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import AppLogoIcon from '@/components/AppLogoIcon.vue';
-import AppLogoText from '@/components/AppLogoText.vue';
+import AppLogoDark from '@/components/ui/logo/AppLogoDark.vue';
+import AppLogoLight from '@/components/ui/logo/AppLogoLight.vue';
+import type { HTMLAttributes } from 'vue';
+
+defineOptions({
+    inheritAttrs: false,
+});
+
+interface Props {
+    className?: HTMLAttributes['class'];
+}
+
+defineProps<Props>();
 
 </script>
 
 <template>
-    <div class="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">
-        <AppLogoIcon class="size-5 fill-current text-white dark:text-black" />
-    </div>
-    <div class="ml-1 grid flex-1 text-left text-sm">
-        <AppLogoText class="h-8" />
-    </div>
+    <AppLogoDark :class="className" v-bind="$attrs" class="hidden dark:block" />
+    <AppLogoLight :class="className" v-bind="$attrs" class="dark:hidden" />
 </template>
