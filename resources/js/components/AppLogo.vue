@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import AppLogoIcon from '@/components/AppLogoIcon.vue';
+import AppLogoText from '@/components/AppLogoText.vue';
+
 </script>
 
 <template>
@@ -7,6 +9,6 @@ import AppLogoIcon from '@/components/AppLogoIcon.vue';
         <AppLogoIcon class="size-5 fill-current text-white dark:text-black" />
     </div>
     <div class="ml-1 grid flex-1 text-left text-sm">
-        <span class="mb-0.5 truncate font-semibold leading-none">Laravel Starter Kit</span>
+        <AppLogoText class="h-8" />
     </div>
 </template>
